@@ -11,12 +11,12 @@ public class StringPalindrome {
 		sc.close();
 		int mid = s.length() / 2;
 		int l = s.length() - 1;
-		System.out.println(isPalindrome(s, l, mid)); 		// Checking Palindrome using Method !
+		System.out.println(palindrome(s, l, mid)); 		// Checking Palindrome using Method !
 		System.out.println(" ");
-		System.out.println(palindrome(s)); 					// Checking Palindrome using StringBuffer Method
+		System.out.println(isPalindrome(s)); 					// Checking Palindrome using StringBuffer Method
 	}
 
-	private static boolean isPalindrome(String s, int len, int mid) {
+	public static boolean palindrome(String s, int len, int mid) {
 		for (int i = 0; i <= mid; i++) {
 			if (s.charAt(i) != s.charAt(len--)) {
 				return false;
@@ -25,7 +25,7 @@ public class StringPalindrome {
 		return true;
 	}
 
-	private static boolean palindrome(String s) {
+	public static boolean isPalindrome(String s) {
 		return new StringBuffer(s).reverse().toString().equals(s);
 	}
 }

@@ -14,7 +14,7 @@ public class SearchAlgorithms extends SortingTechniques {
 			System.out.println("Enter element at " + i + " : ");
 			arr[i] = sc.nextInt();
 		}
-		Arrays.sort(arr); //Sorting arrays
+		SortingTechniques.bubbleSort(arr); //Sorting using bubble sort for BinarySearch
 		System.out.println("Enter key element to search : ");
 		int key = sc.nextInt();
 		System.out.println("1.Linear Search 2.Binary Serach : ");
