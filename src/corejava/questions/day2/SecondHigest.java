@@ -5,10 +5,10 @@ package corejava.questions.day2;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SecondHigest {
+public class SecondHigest extends SortingTechniques {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter no of arrays : ");
+		System.out.println("Enter no of arrays elements : ");
 		int n = sc.nextInt();
 		int arr[] = new int[n];
 
@@ -23,8 +23,8 @@ public class SecondHigest {
 		sort[0] = arr[n - 2];
 		System.out.println("Second big is : " + Arrays.toString(sort));
 	}
-
-	private static int[] bubbleSort(int[] arr) {
+	
+	public static int[] bubbleSort(int[] arr) {
 		int n = arr.length;
 		int temp;
 		for (int i = 0; i < n; i++) {

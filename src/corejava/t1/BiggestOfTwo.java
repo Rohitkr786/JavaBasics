@@ -1,4 +1,4 @@
-package com.corejava.t1;
+package corejava.t1;
 
 import java.util.Scanner;
 
