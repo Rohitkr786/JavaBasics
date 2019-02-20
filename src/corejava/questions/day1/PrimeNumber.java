@@ -1,5 +1,5 @@
 package corejava.questions.day1;
-
+//Write a program to accept a number and determine whether it is a prime number or not.
 import java.util.Arrays;
 import java.util.Scanner;
 

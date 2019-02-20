@@ -1,6 +1,9 @@
-/*Write a method which accepts an array of integers as a parameter and returns the second highest element in the given array. 
-If there are multiple such element, it can be printed just once. */
 package corejava.questions.day2;
+
+/*Write a method which accepts an array of integers as a parameter and 
+ * returns the second highest element in the given array. 
+ * If there are multiple such element, it can be printed just once.
+ */
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -16,14 +19,14 @@ public class SecondHigest extends SortingTechniques {
 			System.out.println("Enter Array Element at " + i);
 			arr[i] = sc.nextInt();
 		}
-		
+
 		System.out.println("Sorted array is : " + Arrays.toString(bubbleSort(arr)));
 		// Arrays.sort(arr); its is predefined function in java to sort array
 		int sort[] = new int[1];
 		sort[0] = arr[n - 2];
 		System.out.println("Second big is : " + Arrays.toString(sort));
 	}
-	
+
 	public static int[] bubbleSort(int[] arr) {
 		int n = arr.length;
 		int temp;

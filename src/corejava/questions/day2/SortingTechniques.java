@@ -1,5 +1,6 @@
 package corejava.questions.day2;
 
+//Learn and implement the following sorting techniques: Bubble Sort, Insertion Sort, Merge Sort
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ public class SortingTechniques {
 		Scanner sc = new Scanner(System.in);
 		int arr[] = { 1, 5, 4, 9, 7, 8, 3, 2 };
 		bubbleSort(arr);
-		System.out.println("Sorting using bubble sort : "+Arrays.toString(arr));
+		System.out.println("Sorting using bubble sort : " + Arrays.toString(arr));
 	}
 
 	public static int[] bubbleSort(int[] arr) {
@@ -18,15 +19,13 @@ public class SortingTechniques {
 			for (int j = 0; j < n - i - 1; j++) {
 				if (arr[j] > arr[j + 1]) {
 					temp = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1]=temp;
+					arr[j] = arr[j + 1];
+					arr[j + 1] = temp;
 				}
 			}
 		}
 		return arr;
 
 	}
-	
-	
 
 }

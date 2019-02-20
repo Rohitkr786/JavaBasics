@@ -1,5 +1,8 @@
 package corejava.questions.day1;
 
+/*Write a program to accept a number from the user and determine the sum of digits of that number. 
+ * Repeat the operation until the sum gets to be a single digit number.
+ * */
 import java.util.Scanner;
 
 public class SumOfDigits {
@@ -14,7 +17,7 @@ public class SumOfDigits {
 			sum = sum + num % 10;
 			num = num / 10;
 		}
-		System.out.println("Sum of Digits in given digits is : "+sum);
+		System.out.println("Sum of Digits in given digits is : " + sum);
 	}
 
 }
