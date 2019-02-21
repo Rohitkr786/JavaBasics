@@ -15,12 +15,12 @@ public class CountOfPalindromes {
 		int count = 0;
 		for (int i = 0; i < n; i++) {
 			if (sp.isPalindrome(arr[i])) {
-				System.out.println("Palindrome(s) in given String is : " + arr[i]);
+				System.out.println("Palindrome(s) in given String is : " + arr[i]+"\n");
 				count++;
 			}
 
 		}
-		System.out.println(" \n Count of Palindrome is : " + count);
+		System.out.println("Count of Palindrome is : " + count);
 	}
 
 }

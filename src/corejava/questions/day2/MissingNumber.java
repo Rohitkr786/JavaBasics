@@ -25,7 +25,6 @@ public class MissingNumber {
 		for (int i = min; i<arr[n-1]; i++) {
 			System.out.println("i is "+i);
 			if (i == arr[c]) {
-				
 				continue;
 			}
 			else {
