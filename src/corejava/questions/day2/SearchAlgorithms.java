@@ -1,5 +1,6 @@
 package corejava.questions.day2;
 
+import java.util.Arrays;
 /* Write a method that accepts two parameters: an integer and an array of integers. 
  * Search for the entered integer value in the array of integers, 
  * and return “True” if present, “False” if not present. 
@@ -13,7 +14,6 @@ public class SearchAlgorithms extends SortingTechniques {
 		System.out.println("Enter array size : ");
 		int n = sc.nextInt();
 		int arr[] = ArrayInput.arrayInput(n); //Array input from user
-		SortingTechniques.bubbleSort(arr); // Sorting using bubble sort for BinarySearch
 		while(true) {
 		System.out.println("Enter key element to search : ");
 		int key = sc.nextInt();
@@ -26,7 +26,7 @@ public class SearchAlgorithms extends SortingTechniques {
 		case 2:
 			int low = 0;
 			int high = n - 1;
-			boolean bs = binarySearch(arr, low, high, key);
+			boolean bs = binarySearch(arr, key);
 			System.out.println("Key found : " + bs);
 			break;
 		}
@@ -34,7 +34,10 @@ public class SearchAlgorithms extends SortingTechniques {
 
 	}
 
-	private static boolean binarySearch(int[] arr, int low, int high, int key) {
+	public static boolean binarySearch(int[] arr, int key) {
+		Arrays.sort(arr);
+		int low = 0;
+		int high = arr.length - 1;
 		while (low <= high) {
 			int mid = (low + high) / 2;
 			if (arr[mid] == key) {
