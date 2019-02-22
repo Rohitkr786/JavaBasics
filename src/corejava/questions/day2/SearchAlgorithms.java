@@ -12,12 +12,9 @@ public class SearchAlgorithms extends SortingTechniques {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter array size : ");
 		int n = sc.nextInt();
-		int arr[] = new int[n];
-		for (int i = 0; i < n; i++) {
-			System.out.println("Enter element at " + i + " : ");
-			arr[i] = sc.nextInt();
-		}
+		int arr[] = ArrayInput.arrayInput(n); //Array input from user
 		SortingTechniques.bubbleSort(arr); // Sorting using bubble sort for BinarySearch
+		while(true) {
 		System.out.println("Enter key element to search : ");
 		int key = sc.nextInt();
 		System.out.println("1.Linear Search 2.Binary Serach : ");
@@ -32,6 +29,7 @@ public class SearchAlgorithms extends SortingTechniques {
 			boolean bs = binarySearch(arr, low, high, key);
 			System.out.println("Key found : " + bs);
 			break;
+		}
 		}
 
 	}

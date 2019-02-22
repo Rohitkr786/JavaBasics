@@ -8,7 +8,9 @@ public class SortingTechniques {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int arr[] = { 5,2,3,6,1 };
+		System.out.println("Enter Array Size : ");
+		int n = sc.nextInt();
+		int arr[]=ArrayInput.arrayInput(n);
 		bubbleSort(arr);
 		sc.close();
 		System.out.println("Sorting using bubble sort : " + Arrays.toString(arr));

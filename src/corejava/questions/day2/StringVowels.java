@@ -8,10 +8,10 @@ public class StringVowels {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a String :");
-		String str = sc.nextLine();
+		String str = sc.nextLine().toLowerCase();
 		int len = str.length();
 		System.out.println("Given String length is "+len);
-		String VOWELS = "aeiouAEIOU";
+		String VOWELS = "aeiou";
 		int vl = VOWELS.length();
 		int vowelCount = 0;
 		for (int i = 0; i < len; i++) {

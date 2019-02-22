@@ -9,12 +9,7 @@ public class MissingNumber {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter array size : ");
 		int n = sc.nextInt();
-		int arr[] = new int[n];
-		for (int i = 0; i < n; i++) {
-			System.out.println("Enter array element at " + i + " : ");
-			arr[i] = sc.nextInt();
-		}
-
+		int arr[] = ArrayInput.arrayInput(n);
 		Arrays.sort(arr); // Sorting of array
 		System.out.println(Arrays.toString(arr));
 		int min = arr[0];
@@ -23,7 +18,6 @@ public class MissingNumber {
 		int c = 0;
 		//int missarr[] = new int[5];
 		for (int i = min; i<arr[n-1]; i++) {
-			System.out.println("i is "+i);
 			if (i == arr[c]) {
 				continue;
 			}

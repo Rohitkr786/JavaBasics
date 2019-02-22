@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class CountOfPalindromes {
 
 	public static void main(String[] args) {
-		StringPalindrome sp = new StringPalindrome();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a String : ");
 		String data = sc.nextLine();
@@ -14,13 +13,15 @@ public class CountOfPalindromes {
 		int n = arr.length;
 		int count = 0;
 		for (int i = 0; i < n; i++) {
-			if (sp.isPalindrome(arr[i])) {
-				System.out.println("Palindrome(s) in given String is : " + arr[i]+"\n");
+			if (StringPalindrome.isPalindrome(arr[i])) {
+				System.out.println("Palindrome(s) in given String is : " + arr[i]);
 				count++;
 			}
 
 		}
+		System.out.println(" ");
 		System.out.println("Count of Palindrome is : " + count);
+		sc.close();
 	}
 
 }

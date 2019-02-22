@@ -13,18 +13,13 @@ public class SecondHigest extends SortingTechniques {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter no of arrays elements : ");
 		int n = sc.nextInt();
-		int arr[] = new int[n];
-
-		for (int i = 0; i < n; i++) {
-			System.out.println("Enter Array Element at " + i);
-			arr[i] = sc.nextInt();
-		}
-
+		int arr[] = ArrayInput.arrayInput(n); // Array input from user
 		System.out.println("Sorted array is : " + Arrays.toString(bubbleSort(arr)));
-		// Arrays.sort(arr); its is predefined function in java to sort array
+		// Arrays.sort(arr); //its is predefined function in java to sort array using
+		// QuickSort
 		int sort[] = new int[1];
 		sort[0] = arr[n - 2];
-		System.out.println("Second big is : " + Arrays.toString(sort));
+		System.out.println("Second biggest in array is : " + Arrays.toString(sort));
 	}
 
 	public static int[] bubbleSort(int[] arr) {

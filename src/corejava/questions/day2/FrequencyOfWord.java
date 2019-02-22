@@ -14,23 +14,23 @@ public class FrequencyOfWord {
 		for (int i = 0; i < n; i++) {
 			arrCopy[i] = arr[i];
 		}
-		
-		frequencyOfWord(arr,arrCopy);
-		
+
+		frequencyOfWord(arr, arrCopy);
+
 	}
 
 	private static void frequencyOfWord(String[] arr, String[] arrCopy) {
-		int count=0,n=arr.length;
+		int count = 0, n = arr.length;
 		String arrScanned[] = new String[n];
-		for(int i=0;i<n;i++) {
-			for(int j=0;j<n;j++) {
-				if(arr[i].equals(arrCopy[j])) {
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				if (arr[i].equals(arrCopy[j])) {
 					count++;
-					//arrScanned[i]=arr[i];
+					// arrScanned[i]=arr[i];
 				}
 			}
-			System.out.println("The frequency of - "+arr[i]+"  is "+count);
-			count=0;
+			System.out.println("The frequency of - " + arr[i] + "  is " + count);
+			count = 0;
 		}
 	}
 
