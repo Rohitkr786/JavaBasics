@@ -8,7 +8,7 @@ public class PrimeNumber {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a number to check to prime or not");
 		int num = sc.nextInt();
-		System.out.println(Arrays.toString(getPrimes(num)));
+		//System.out.println(Arrays.toString(getPrimes(num)));
 		if (isPrime(num)) {
 			System.out.println("Prime Number");
 		} else {

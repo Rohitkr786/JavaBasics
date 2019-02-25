@@ -27,7 +27,7 @@ public class ArrayOperations {
 		System.out.println("Sorted array is :"+Arrays.toString(arr));
 		int revArr[]=revArr(arr);
 		System.out.println("Reversed array is : "+Arrays.toString(revArr));
-
+		sc.close();
 	}
 
 	private static int[] revArr(int[] arr) {
@@ -49,7 +49,7 @@ public class ArrayOperations {
 		return sum;
 	}
 
-	private static int smallest(int[] arr) {
+	public static int smallest(int[] arr) {
 		int small = arr[0];
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] < small) {
@@ -59,7 +59,7 @@ public class ArrayOperations {
 		return small;
 	}
 
-	private static int biggest(int[] arr) {
+	public static int biggest(int[] arr) {
 		int big = arr[0];
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] > big) {

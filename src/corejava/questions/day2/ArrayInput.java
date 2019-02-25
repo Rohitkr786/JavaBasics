@@ -13,4 +13,5 @@ public class ArrayInput {
 		}
 		return arr;
 	}
+
 }

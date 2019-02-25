@@ -8,22 +8,21 @@ public class StringVowels {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a String :");
-		String str = sc.nextLine();
+		String str = sc.nextLine().toLowerCase();
 		int len = str.length();
 		System.out.println("Given String length is "+len);
-		String VOWELS = "aeiouAEIOU";
-		int vl = VOWELS.length();
-		int vowelCount = 0;
-		for (int i = 0; i < len; i++) {
-			for (int j = 0; j < vl; j++) {
-				if (str.charAt(i) == VOWELS.charAt(j)) {
-					vowelCount = vowelCount + 1;
-				} 
+		int vowelCount = 0,consonantsCount=0;
+		for(int i=0;i<len;i++) {
+			char c=str.charAt(i);
+			if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u') {
+				vowelCount++;
+			}
+			else if(c>='a'&&c<='z') {
+				consonantsCount++;
 			}
 		}
 		System.out.println("Vowels Count is :" + vowelCount);
-		//int consonantsCount = len-vowelCount;
-		//System.out.println("Consonants Count is :" + consonantsCount);
+		System.out.println("Consonants Count is :" + consonantsCount);
 		sc.close();
 		
 	}

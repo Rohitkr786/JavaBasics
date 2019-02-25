@@ -6,7 +6,9 @@ public class BiggestOfTwo {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Value Number 1 :");
 		int a = sc.nextInt();
+		System.out.println("Enter Value Number 2 :");
 		int b = sc.nextInt();
 		int big = biggestOfTwo(a, b); // Using terinary operator
 		System.out.println("Big is :" + big);
