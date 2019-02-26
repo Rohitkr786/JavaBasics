@@ -2,12 +2,11 @@ package corejava.questions.day3;
 
 import java.util.Random;
 
-public class NumberGeneration {
-
+public class Number {
+	// a+b+c+d=12
+	// a-b=c
+	// a+c=d
 	public static void main(String[] args) {
-		// a+b+c+d=12
-		// a-b=c
-		// a+c=d
 		int sum, a, b, c, d;
 		Random rd = new Random();
 		while (true) {
@@ -25,10 +24,12 @@ public class NumberGeneration {
 				System.out.println(a + " " + b + " " + " " + c + " " + d);
 				break;
 			}
-			if (a - b == c) {
-
+			if(a-b==c) {
+				
 			}
 		}
+		
+
 	}
 
 }
