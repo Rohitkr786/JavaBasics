@@ -11,7 +11,9 @@ public class ArrayInput {
 			System.out.println("Enter Array Element at " + i);
 			arr[i] = sc.nextInt();
 		}
+		sc.close();
 		return arr;
 	}
+	
 
 }

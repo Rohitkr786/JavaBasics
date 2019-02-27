@@ -20,6 +20,7 @@ public class SecondHigest extends SortingTechniques {
 		int sort[] = new int[1];
 		sort[0] = arr[n - 2];
 		System.out.println("Second biggest in array is : " + Arrays.toString(sort));
+		sc.close();
 	}
 
 	public static int[] bubbleSort(int[] arr) {

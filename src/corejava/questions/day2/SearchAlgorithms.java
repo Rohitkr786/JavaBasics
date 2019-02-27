@@ -24,8 +24,6 @@ public class SearchAlgorithms extends SortingTechniques {
 			System.out.println("Key found : " + linaerSearch(arr, key));
 			break;
 		case 2:
-			int low = 0;
-			int high = n - 1;
 			boolean bs = binarySearch(arr, key);
 			System.out.println("Key found : " + bs);
 			break;

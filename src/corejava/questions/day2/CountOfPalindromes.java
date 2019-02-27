@@ -1,6 +1,5 @@
 package corejava.questions.day2;
 //Write a program to  determine the count of palindromes in the given string.
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class CountOfPalindromes {

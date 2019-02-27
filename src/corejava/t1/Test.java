@@ -1,26 +1,24 @@
 package corejava.t1;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 public class Test {
-    public static void main(String[] args) {
-        int[] a = { 5, 4, 1, 3, 0 };
-        System.out.println(Arrays.toString(sortArray(a)));
-    }
-
-    public static int[] sortArray(int[] nonSortedArray) {
-        int[] sortedArray = new int[nonSortedArray.length];
-        int temp;
-
-        for (int i = 0; i < nonSortedArray.length - 1; i++) {
-            if (nonSortedArray[i] > nonSortedArray[i + 1]) {
-                temp = nonSortedArray[i];
-                nonSortedArray[i] = nonSortedArray[i + 1];
-                nonSortedArray[i + 1] = temp;
-                sortedArray = nonSortedArray;
-            }
-        }
-
-        return sortedArray;
-    }
+	public static void main(String[] args) {
+		String data = "Rajesh,sujith,Manju,Venkat,Subhash,Ananth,Rajesh,Manju";
+		String arr[]= data.split(",");
+		List<String> list = new ArrayList<>();
+		for(String s:arr) {
+			if(!list.contains(s)) {
+				list.add(s);
+			}
+			else {
+				System.out.println("Duplicated value "+s);
+			}
+		}
+		System.out.println(list);
+	}
 }

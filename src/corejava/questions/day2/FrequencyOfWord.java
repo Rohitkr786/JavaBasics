@@ -1,5 +1,7 @@
 package corejava.questions.day2;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class FrequencyOfWord {
@@ -14,14 +16,24 @@ public class FrequencyOfWord {
 		for (int i = 0; i < n; i++) {
 			arrCopy[i] = arr[i];
 		}
-
 		frequencyOfWord(arr, arrCopy);
+		//frequencyOfWord(arr);
+		sc.close();
 
+	}
+
+	private static void frequencyOfWord(String[] arr) {
+		List<String> list = new ArrayList<>();
+		for(String s:arr) {
+			if(list.contains(s)) {
+				
+			}
+		}
 	}
 
 	private static void frequencyOfWord(String[] arr, String[] arrCopy) {
 		int count = 0, n = arr.length;
-		String arrScanned[] = new String[n];
+		//String arrScanned[] = new String[n];
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				if (arr[i].equals(arrCopy[j])) {

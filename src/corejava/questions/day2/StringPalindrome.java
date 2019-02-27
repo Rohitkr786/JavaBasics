@@ -8,12 +8,12 @@ public class StringPalindrome {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a Word to check Palindrome :");
 		String s = sc.next();
-		sc.close();
 		int mid = s.length() / 2;
 		int l = s.length() - 1;
 		System.out.println(palindrome(s, l, mid)); 		// Checking Palindrome using Method !
 		System.out.println(" ");
 		System.out.println(isPalindrome(s)); 					// Checking Palindrome using StringBuffer Method
+		sc.close();
 	}
 
 	public static boolean palindrome(String s, int len, int mid) {

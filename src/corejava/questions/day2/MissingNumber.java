@@ -12,9 +12,8 @@ public class MissingNumber {
 		int arr[] = ArrayInput.arrayInput(n);
 		Arrays.sort(arr); // Sorting of array
 		System.out.println("Sorted Array :- "+Arrays.toString(arr));
-		int min = arr[0];
 		int c = 0;
-		for (int i = min;; i++) {
+		for (;;) {
 			int pre = arr[c];
 			int next = arr[c + 1];
 			if ((pre + 1) != next) {
