@@ -11,23 +11,21 @@ public class MissingNumber {
 		int n = sc.nextInt();
 		int arr[] = ArrayInput.arrayInput(n);
 		Arrays.sort(arr); // Sorting of array
-		System.out.println(Arrays.toString(arr));
+		System.out.println("Sorted Array :- "+Arrays.toString(arr));
 		int min = arr[0];
-		int max = arr[n - 1];
-		System.out.println(min+" "+max);
 		int c = 0;
-		//int missarr[] = new int[5];
-		for (int i = min; i<arr[n-1]; i++) {
-			if (i == arr[c]) {
-				continue;
+		for (int i = min;; i++) {
+			int pre = arr[c];
+			int next = arr[c + 1];
+			if ((pre + 1) != next) {
+				System.out.println("Missing Number is " + (pre + 1));
 			}
-			else {
-				System.out.println("missing element is " + i);
-				c++;
-				
+			c++;
+			if (c == arr.length - 1) {
+				break;
 			}
-
 		}
+		sc.close();
 	}
 
 }
