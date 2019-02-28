@@ -31,9 +31,9 @@ public class Maps {
 				map.put(name, numb);
 			}
 			else {
-				List<Integer> ls = map.get(name);
-				ls.add(num);
-				map.put(name, ls);
+				List<Integer> numb = map.get(name);
+				numb.add(num);
+				map.put(name, numb);
 			}
 		}
 		System.out.println(map);
