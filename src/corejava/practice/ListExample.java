@@ -1,4 +1,4 @@
-package corejava.t1;
+package corejava.practice;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class Test {
+public class ListExample {
 	public static void main(String[] args) {
 		String data = "Rajesh,sujith,Manju,Venkat,Subhash,Ananth,Rajesh,Manju";
 		String arr[]= data.split(",");

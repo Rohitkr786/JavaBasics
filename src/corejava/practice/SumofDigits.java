@@ -1,4 +1,4 @@
-package corejava.t1;
+package corejava.practice;
 
 import java.util.Scanner;
 

@@ -1,12 +1,15 @@
 package corejava.questions.day3;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 import corejava.questions.day2.ArrayInput;
 import corejava.questions.day2.SearchAlgorithms;
 
 public class ArrayOperations {
+
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -23,19 +26,28 @@ public class ArrayOperations {
 		System.out.println("Average of an array  is " + avg);
 		System.out.println("Enter key element to search :");
 		int key = sc.nextInt();
-		System.out.println("Key found is "+SearchAlgorithms.binarySearch(arr, key));
+		System.out.println("Key found is "+SearchAlgorithms.binarySearch(key,arr));
 		System.out.println("Sorted array is :"+Arrays.toString(arr));
 		int revArr[]=revArr(arr);
 		System.out.println("Reversed array is : "+Arrays.toString(revArr));
 		sc.close();
 	}
 
+	private static int[] suffleArr(int[] arr) {
+		List<Integer> list = new ArrayList<>();
+		for (int i = 0; i < arr.length; i++) {
+			list.add(arr[i]);
+		}
+		System.out.println(list);
+		return null;
+	}
+
 	private static int[] revArr(int[] arr) {
 		int n = arr.length;
-		int revArr[]=new int[n];
-		int c=n-1;
-		for(int i=0;i<n;i++) {
-			revArr[c]=arr[i];
+		int revArr[] = new int[n];
+		int c = n - 1;
+		for (int i = 0; i < n; i++) {
+			revArr[c] = arr[i];
 			c--;
 		}
 		return revArr;

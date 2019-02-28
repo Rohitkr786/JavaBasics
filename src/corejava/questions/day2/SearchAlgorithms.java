@@ -21,11 +21,16 @@ public class SearchAlgorithms extends SortingTechniques {
 		int c = sc.nextInt();
 		switch (c) {
 		case 1:
+			System.out.println("Array elements :- "+Arrays.toString(arr));
 			System.out.println("Key found : " + linaerSearch(arr, key));
+			System.out.println("Key found : " + linaerSearch(key, arr));
 			break;
 		case 2:
 			boolean bs = binarySearch(arr, key);
+			System.out.println("Array elements :- "+Arrays.toString(arr));
 			System.out.println("Key found : " + bs);
+			int pos =binarySearch(key,arr);
+			System.out.println("Positon is "+pos);
 			break;
 		}
 		}
@@ -48,6 +53,24 @@ public class SearchAlgorithms extends SortingTechniques {
 		}
 		return false;
 	}
+	
+	public static int binarySearch(int key,int[] arr) {
+		Arrays.sort(arr);
+		int low = 0,pos=-1;
+		int high = arr.length - 1;
+		while (low <= high) {
+			int mid = (low + high) / 2;
+			if (arr[mid] == key) {
+				pos=mid;
+				return mid;
+			} else if (arr[mid] < key) {
+				low = mid + 1;
+			} else if (arr[mid] > key) {
+				high = mid - 1;
+			}
+		}
+		return pos;
+	}
 
 	private static boolean linaerSearch(int[] arr, int key) {
 		for (int i = 0; i < arr.length; i++) {
@@ -56,5 +79,15 @@ public class SearchAlgorithms extends SortingTechniques {
 			}
 		}
 		return false;
+	}
+	private static int linaerSearch(int key,int[] arr) {
+		int pos=-1;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == key) {
+				pos =i;
+				return pos;
+			}
+		}
+		return pos;
 	}
 }
