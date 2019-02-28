@@ -38,7 +38,7 @@ public class FrequencyOfWord {
 		}
 		Set<Entry<String, Integer>> entry = map.entrySet();
 		for (Entry<String, Integer> e : entry) {
-			System.out.println("Frequency of " + e.getKey() + " is " + e.getValue());
+			System.out.println("Frequency of word " + e.getKey() + " is " + e.getValue());
 		}
 	}
 
