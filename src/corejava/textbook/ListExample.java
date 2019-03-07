@@ -13,6 +13,7 @@ public class ListExample {
 		list.add(102);
 		list.add(103);
 		list.add(104);
+		list.add(105);
 		int n=0;
 		ListIterator<Integer> lt = list.listIterator();
 		while(lt.hasNext()) {
