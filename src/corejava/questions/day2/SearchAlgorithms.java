@@ -23,7 +23,7 @@ public class SearchAlgorithms extends SortingTechniques {
 		case 1:
 			System.out.println("Array elements :- "+Arrays.toString(arr));
 			System.out.println("Key found : " + linaerSearch(arr, key));
-			System.out.println("Key found : " + linaerSearch(key, arr));
+			System.out.println("Key postion is : " + linaerSearch(key, arr));
 			break;
 		case 2:
 			boolean bs = binarySearch(arr, key);
@@ -61,8 +61,8 @@ public class SearchAlgorithms extends SortingTechniques {
 		while (low <= high) {
 			int mid = (low + high) / 2;
 			if (arr[mid] == key) {
-				pos=mid;
-				return mid;
+				pos=mid+1;
+				return pos;
 			} else if (arr[mid] < key) {
 				low = mid + 1;
 			} else if (arr[mid] > key) {
@@ -84,7 +84,7 @@ public class SearchAlgorithms extends SortingTechniques {
 		int pos=-1;
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] == key) {
-				pos =i;
+				pos =i+1;
 				return pos;
 			}
 		}
