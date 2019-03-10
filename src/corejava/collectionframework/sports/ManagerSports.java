@@ -23,9 +23,10 @@ public class ManagerSports {
 		List<String> playerList = pc.getPlayers(football, cricket);
 		showplayers(football);
 		showplayers(cricket);
-		showPlayers(playerList); // overloading method by passing different arguments
+		showPlayers(playerList);
 
 	}
+
 
 	private static void showPlayers(List<String> playerList) {
 		System.out.println("List of players who play both Cricket and Football");
