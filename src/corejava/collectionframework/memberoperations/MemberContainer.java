@@ -14,4 +14,6 @@ public interface MemberContainer {
 	void displaySorting(String s);
 
 	List<Member> getAllMembers();
+	
+	List<String> displaySortingOrder(String s);
 }

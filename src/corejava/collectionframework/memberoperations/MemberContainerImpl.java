@@ -1,6 +1,8 @@
 package corejava.collectionframework.memberoperations;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class MemberContainerImpl implements MemberContainer {
@@ -92,4 +94,42 @@ public class MemberContainerImpl implements MemberContainer {
 		return searchList;
 	}
 
+	@Override
+	public List<String> displaySortingOrder(String s) {
+		List<String> sortedList = new ArrayList<>();
+		if (s.startsWith("ASC")) {
+			System.out.println("Sorting by Ascending order....................");
+			Collections.sort(list, new CompareingAsc());
+		}
+		else {
+			System.out.println("Sorting by Descending order....................");
+			Collections.sort(list, new CompareingDesc());
+		}
+		for (Member m : list) {
+			sortedList.add(m.getName());
+			// System.out.println(m.getName());
+		}
+		return sortedList;
+	}
+
 }
+
+class CompareingAsc implements Comparator<Member> {
+
+	@Override
+	public int compare(Member m1, Member m2) {
+		System.out.println("Comparing " + m1.getName() + " and " + m2.getName());
+		return m1.getName().compareTo(m2.getName());
+	}
+
+}
+
+class CompareingDesc implements Comparator<Member> {
+	@Override
+	public int compare(Member m1, Member m2) {
+		System.out.println("Comparing " + m1.getName() + " and " + m2.getName());
+		return m2.getName().compareTo(m1.getName());
+	}
+
+	
+	}
