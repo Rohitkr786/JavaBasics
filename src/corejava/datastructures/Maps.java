@@ -56,6 +56,7 @@ public class Maps {
 		for(Integer k:keys) {
 			System.out.println("Key is "+k+" value is "+map.get(k));
 		}
+		
 		Set<Entry<Integer, Integer>> entry = map.entrySet(); //third way
 		for(Entry<Integer, Integer> e:entry) {
 			System.out.println("Key is "+e.getKey()+ " Value => "+e.getValue());

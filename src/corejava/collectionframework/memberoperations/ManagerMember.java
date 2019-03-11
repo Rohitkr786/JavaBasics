@@ -14,10 +14,19 @@ public class ManagerMember {
 		m.addMember("VARUN", "HYDRABAD", "INDIA");
 		List<Member> list = null;
 		list = m.getAllMembers();
+		System.out.println("All Members Data................");
 		showMembers(list);
-		m.deleteMember("ASHO5011IND");
+		m.deleteMember("ASHO5011IND"); //Deleting using ID
 		list = m.getAllMembers();
-		System.out.println("After deleting ");
+		System.out.println("After deleting............. ");
+		showMembers(list);
+		String id="ASHO5007IND";
+		String name="RAKESH";
+		list=m.searchById(id);
+		System.out.println("Searching using ID only................");
+		showMembers(list);
+		list = m.searchMember(id, name);
+		System.out.println("Searching using ID or Name");
 		showMembers(list);
 	}
 

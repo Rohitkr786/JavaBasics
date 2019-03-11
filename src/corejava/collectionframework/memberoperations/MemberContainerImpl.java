@@ -9,6 +9,7 @@ public class MemberContainerImpl implements MemberContainer {
 	private Member m = null;
 
 	private MemberContainerImpl() {
+
 	}
 
 	private static MemberContainerImpl obj;
