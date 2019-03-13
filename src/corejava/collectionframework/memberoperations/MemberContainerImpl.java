@@ -127,7 +127,7 @@ class CompareingAsc implements Comparator<Member> {
 class CompareingDesc implements Comparator<Member> {
 	@Override
 	public int compare(Member m1, Member m2) {
-		System.out.println("Comparing " + m1.getName() + " and " + m2.getName());
+		System.out.println("Comparing " + m2.getName() + " and " + m1.getName());
 		return m2.getName().compareTo(m1.getName());
 	}
 

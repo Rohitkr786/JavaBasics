@@ -10,32 +10,30 @@ public class ManagerSports {
 		Player p = null;
 		p = Player.builder().name("RAJESH").age(21).city("BLR").state("KA").sport("CRICKET").build();
 		pc.add(p);
+		p = Player.builder().name("LOKESH").age(21).city("HYD").state("TS").sport("CRICKET").build();
+		pc.add(p);
+		p = Player.builder().name("GOKUL").age(22).city("HASSAN").state("KA").sport("CRICKET").build();
+		pc.add(p);
 		p = Player.builder().name("GOKUL").age(22).city("HASSAN").state("KA").sport("FOOTBALL").build();
 		pc.add(p);
 		p = Player.builder().name("RAJESH").age(21).city("BLR").state("KA").sport("FOOTBALL").build();
 		pc.add(p);
 		p = Player.builder().name("LOKESH").age(21).city("HYD").state("TS").sport("FOOTBALL").build();
 		pc.add(p);
-		p = Player.builder().name("LOKESH").age(21).city("HYD").state("TS").sport("CRICKET").build();
+		p = Player.builder().name("MANJU").age(21).city("BALLERY").state("KA").sport("CRICKET").build();
 		pc.add(p);
 		List<Player> football = pc.getFootballPlayers();
 		List<Player> cricket = pc.getCricketPlayers();
-		List<String> playerList = pc.getPlayers(football, cricket);
-		showplayers(football);
-		showplayers(cricket);
-		showPlayers(playerList);
+		List<Player> commonPlayerList = pc.getPlayers(football, cricket);
+		showPlayers(football);
+		showPlayers(cricket);
+		System.out.println("Common players who play both games.................");
+		showCommonPlayers(commonPlayerList);
 
 	}
 
 
-	private static void showPlayers(List<String> playerList) {
-		System.out.println("List of players who play both Cricket and Football");
-		for (String s : playerList) {
-			System.out.println(s);
-		}
-	}
-
-	private static void showplayers(List<Player> sport) {
+	private static void showPlayers(List<Player> sport) {
 		System.out.println("Players Data.................");
 		for (Player p : sport) {
 			System.out.println("Name " + p.getName());
@@ -44,6 +42,12 @@ public class ManagerSports {
 			System.out.println("City " + p.getCity());
 			System.out.println("State " + p.getState());
 			System.out.println("-----------------------------");
+		}
+	}
+	private static void showCommonPlayers(List<Player> sport) {
+		System.out.println("Sorting by Ascending order");
+		for (Player p : sport) {
+			System.out.println("Name : " + p.getName());
 		}
 	}
 }

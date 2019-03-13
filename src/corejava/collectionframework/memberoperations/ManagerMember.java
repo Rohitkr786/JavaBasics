@@ -22,7 +22,7 @@ public class ManagerMember {
 		showMembers(list);
 
 		// SORTING ALL MEMBERS DATA
-		String sortType = "DESC";
+		String sortType = "ASC";
 		List<String> sorted = m.displaySortingOrder(sortType);
 		System.out.println("After Sorting................");
 		showSortedMembers(sorted);

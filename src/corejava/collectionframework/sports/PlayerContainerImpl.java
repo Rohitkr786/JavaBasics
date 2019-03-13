@@ -1,6 +1,7 @@
 package corejava.collectionframework.sports;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class PlayerContainerImpl implements PlayerContainer {
@@ -18,15 +19,16 @@ public class PlayerContainerImpl implements PlayerContainer {
 	}
 
 	@Override
-	public List<String> getPlayers(List<Player> football, List<Player> cricket) {
-		List<String> list = new ArrayList<>();
+	public List<Player> getPlayers(List<Player> football, List<Player> cricket) {
+		List<Player> list = new ArrayList<>();
 		for (Player fb : football) {
 			for (Player c : cricket) {
 				if (fb.getName().equals(c.getName())) {
-					list.add(c.getName());
+					list.add(c);
 				}
 			}
 		}
+		Collections.sort(list,new PlayersSortByName());
 		return list;
 	}
 
@@ -45,7 +47,10 @@ public class PlayerContainerImpl implements PlayerContainer {
 		for (Player p : football) {
 			list.add(p);
 		}
+		
 		return list;
 	}
 
 }
+
+

@@ -16,7 +16,7 @@ public class Manager {
 		e = ec.addEmployee(emp);
 		showEmployee(e);
 		int id = 101;
-		List<Employee> search = ec.viewEmployee(id);
+		List<Employee> search = ec.viewAllEmployees(id);
 		System.out.println("Searching with employee id "+id);
 		showEmployee(search);
 		System.out.println("-------------");

@@ -25,15 +25,12 @@ public class EmployeeContainerImpl implements EmployeeContainer {
 	}
 
 	@Override
-	public List<Employee> viewEmployee(int empno) {
-
-		List<Employee> searchList = new ArrayList<>();
-		for (Employee e : list) {
-			if (e.getEno() == empno) {
-				searchList.add(e);
-			}
+	public List<Employee> viewAllEmployees(int empno) {
+		if (list.isEmpty()) {
+			System.out.println("Employee list is empty...");
+			return null;
 		}
-		return searchList;
+		return list;
 	}
 
 	@Override
