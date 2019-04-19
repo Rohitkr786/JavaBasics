@@ -17,18 +17,15 @@ public class MemberIdGenerator {
 		int c = MemberIdGenerator.count;
 		c++;
 		String id = mid.prifix + c + mid.suffix; // Generating Memeber ID
-		String nid = null;
 		if (list.isEmpty()) {
 			return id;
 		} else {
 			for (Member m : list) {
-				nid = m.getMid();
-				c++;
+				c++; // Increment the counter for each Member
 			}
 		}
 		id = mid.prifix + c + mid.suffix;
-		String newId = nid.replace(nid, id);
-		return newId;
+		return id; // newId;
 
 	}
 }

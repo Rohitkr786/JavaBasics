@@ -24,7 +24,7 @@ public class ManagerSports {
 		pc.add(p);
 		List<Player> football = pc.getFootballPlayers();
 		List<Player> cricket = pc.getCricketPlayers();
-		List<Player> commonPlayerList = pc.getPlayers(football, cricket);
+		List<Player> commonPlayerList = pc.getCommonPlayers(football, cricket);
 		showPlayers(football);
 		showPlayers(cricket);
 		System.out.println("Common players who play both games.................");
@@ -47,7 +47,7 @@ public class ManagerSports {
 	private static void showCommonPlayers(List<Player> sport) {
 		System.out.println("Sorting by Ascending order");
 		for (Player p : sport) {
-			System.out.println("Name : " + p.getName());
+			System.out.println("Name : " + p.getName() );
 		}
 	}
 }

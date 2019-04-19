@@ -19,7 +19,7 @@ public class PlayerContainerImpl implements PlayerContainer {
 	}
 
 	@Override
-	public List<Player> getPlayers(List<Player> football, List<Player> cricket) {
+	public List<Player> getCommonPlayers(List<Player> football, List<Player> cricket) {
 		List<Player> list = new ArrayList<>();
 		for (Player fb : football) {
 			for (Player c : cricket) {

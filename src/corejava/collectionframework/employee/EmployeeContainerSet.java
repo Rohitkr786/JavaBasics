@@ -24,7 +24,7 @@ public class EmployeeContainerSet implements EmployeeContainer{
 		return false;
 	}
 
-	@Override
+
 	public List<Employee> viewEmployee(int empno) {
 		// TODO Auto-generated method stub
 		return null;
@@ -38,6 +38,12 @@ public class EmployeeContainerSet implements EmployeeContainer{
 			System.out.println("Job is "+e.getJob());
 			System.out.println("--------------------");
 		}
+	}
+
+	@Override
+	public List<Employee> viewAllEmployees(int empno) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

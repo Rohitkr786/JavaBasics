@@ -9,5 +9,5 @@ public interface PlayerContainer {
 
 	List<Player> getFootballPlayers();
 
-	List<Player> getPlayers(List<Player> football, List<Player> cricket);
+	List<Player> getCommonPlayers(List<Player> football, List<Player> cricket);
 }

@@ -8,7 +8,7 @@ import java.util.List;
 public class MemberContainerImpl implements MemberContainer {
 
 	private List<Member> list = new ArrayList<>();
-	private Member m = null;
+	private Member member = null;
 
 	private MemberContainerImpl() {
 
@@ -26,8 +26,8 @@ public class MemberContainerImpl implements MemberContainer {
 	@Override
 	public void addMember(String name, String city, String country) {
 		String id = MemberIdGenerator.getMemeberId();
-		m = Member.builder().name(name).mid(id).city(city).country(country).build();
-		list.add(m);
+		member = Member.builder().name(name).mid(id).city(city).country(country).build();
+		list.add(member);
 	}
 
 	@Override
