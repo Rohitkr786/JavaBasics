@@ -15,10 +15,10 @@ public class Employee {
 	private String job;
 
 	public void showInfo() {
-		System.out.println("Employee Details");
-		System.out.println(empno);
-		System.out.println(ename);
-		System.out.println(job);
+		System.out.println("Finding Employee Details.............");
+		System.out.println("Empno : " + empno);
+		System.out.println("Emp name : " + ename);
+		System.out.println("Emp Job : " + job);
 		System.out.println("-----------------");
 	}
 }
