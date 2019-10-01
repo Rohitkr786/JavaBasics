@@ -48,10 +48,7 @@ public class EmployeeContainerImpl implements EmployeeContainer {
 		if (set.size() != 0) {
 			System.out.println("All Employees details");
 			for (Employee employee : set) {
-				System.out.println("Emp no : " + employee.getEmpno());
-				System.out.println("Emp name : " + employee.getEname());
-				System.out.println("Emp Job : " + employee.getJob());
-				System.out.println("-----------------");
+				employee.showInfo();
 			}
 		} else
 			System.out.println("No employee found to view");

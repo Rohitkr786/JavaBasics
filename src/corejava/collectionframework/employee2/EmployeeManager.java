@@ -12,6 +12,7 @@ public class EmployeeManager {
 		emp.addEmployee(Employee.builder().empno(101).ename("Rajesh").job("Developer").build());
 		Employee employee = emp.viewEmployee(102);
 		if (employee != null) {
+			System.out.println("Finding Employee Details.............");
 			employee.showInfo();
 		} else {
 			System.out.println("Employee not found");
