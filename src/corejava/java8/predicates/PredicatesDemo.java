@@ -13,9 +13,9 @@ public class PredicatesDemo {
 
 		System.out.println(count);
 
-		Predicate<Integer> isGreaterThan5 = ele -> ele > 12;
+		Predicate<Integer> isGreaterThan12 = ele -> ele > 12;
 
-		count = check(isEven.and(isGreaterThan5), arr); // checks for even and num > 12
+		count = check(isEven.and(isGreaterThan12), arr); // checks for even and num > 12
 
 		System.out.println(count);
 
