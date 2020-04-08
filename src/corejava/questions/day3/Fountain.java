@@ -3,17 +3,17 @@ package corejava.questions.day3;
 public class Fountain {
 
 	public static void main(String[] args) {
-		int arr[] = { 2,0,0,0 };
+		int arr[] = { 1,2,1,4 };
 		int len = arr.length;
 		getRes(arr, len);
 	}
 
 	private static void getRes(int[] arr, int len) {
 		int maxRange = 0;
-		for(int i=1;i<len;i++) {
-			int range = getRange(i,arr[i-1],len);
-			if(range>maxRange) {
-				maxRange=range;
+		for (int i = 1; i <= len; i++) {
+			int range = getRange(i, arr[i - 1], len);
+			if (range > maxRange) {
+				maxRange = range;
 			}
 		}
 		System.out.println(maxRange);
