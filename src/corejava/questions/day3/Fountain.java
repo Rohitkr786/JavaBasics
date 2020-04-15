@@ -3,7 +3,7 @@ package corejava.questions.day3;
 public class Fountain {
 
 	public static void main(String[] args) {
-		int arr[] = { 1,2,1,4 };
+		int arr[] = { 1,2,1};
 		int len = arr.length;
 		getRes(arr, len);
 	}
